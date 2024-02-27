@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import mercado.util.Cores;
 import mercado.controller.ProdutoController;
 import mercado.model.Alimento;
 import mercado.model.Bebida;
@@ -21,20 +22,10 @@ public class Menu {
 		String nome, marca;
 		float preco;
 
-		// Teste da Classe Produto (excluido após inserir ABSTRACT)
-		// Produto a1 = new Produto(123, "feijão", 1, 30.0f);
-		// a1.visualizar();
-
-		// Teste da Classe Alimento
-		//Alimento a2 = new Alimento(124, "arroz", 1, 30.0f, "pantera");
-		//a2.visualizar();
-
 		while (true) {
 
-			System.out.println("-----------------------------------------------------");
-			System.out.println("                                                     ");
+			System.out.println(Cores.TEXT_CYAN + Cores.ANSI_BLACK_BACKGROUND + "-----------------------------------------------------");
 			System.out.println("                   MERCADO DUDA                      ");
-			System.out.println("                                                     ");
 			System.out.println("-----------------------------------------------------");
 			System.out.println("                                                     ");
 			System.out.println("            1 - Criar Produto                        ");
@@ -46,7 +37,7 @@ public class Menu {
 			System.out.println("                                                     ");
 			System.out.println("-----------------------------------------------------");
 			System.out.println("   Opção desejada:                                   ");
-			System.out.println("-----------------------------------------------------");
+			System.out.println("-----------------------------------------------------" + Cores.TEXT_RESET);
 
 			// add try catch para tratar exceções
 			try {
@@ -58,38 +49,38 @@ public class Menu {
 			}
 
 			if (opcao == 6) {
-				System.out.println("\nObrigade, Mercado Duda agradece a preferência!");
+				System.out.println(Cores.TEXT_PURPLE + "\nObrigade, Mercado Duda agradece a preferência!");
 				leia.close();
 				System.exit(0);
 			}
 
 			switch (opcao) {
 			case 1:
-				System.out.println("Criar Produto\n\n");
+				System.out.println(Cores.TEXT_CYAN + "Criar Produto\n\n");
 
 				System.out.println("Digite o ID do Produto: ");
 				id = leia.nextInt();
-				System.out.println("Digite o Nome do Produto: ");
+				System.out.println("\nDigite o Nome do Produto: ");
 				leia.skip("\\R?");
 				nome = leia.nextLine();
 
 				do {
-					System.out.println("Digite o Tipo do Produto (1-Alimento ou 2-Bebida): ");
+					System.out.println("\nDigite o Tipo do Produto (1-Alimento ou 2-Bebida): ");
 					tipo = leia.nextInt();
 				} while (tipo < 1 && tipo > 2);
 
-				System.out.println("Digite o Preço do Produto R$");
+				System.out.println("\nDigite o Preço do Produto R$");
 				preco = leia.nextFloat();
 
 				switch (tipo) {
 				case 1 -> {
-					System.out.println("Digite a marca: ");
+					System.out.println("\nDigite a marca: ");
 					leia.skip("\\R?");
 					marca = leia.nextLine();
 					produtos.criarProduto(new Alimento(id, nome, tipo, preco, marca));
 				}
 				case 2 -> {
-					System.out.println("Digite o Volume em ml: ");
+					System.out.println("\nDigite o Volume em ml: ");
 					volume = leia.nextInt();
 					leia.skip("\\R?");
 					produtos.criarProduto(new Bebida(id, nome, tipo, preco, volume));
@@ -99,13 +90,13 @@ public class Menu {
 				keyPress();
 				break;
 			case 2:
-				System.out.println("Listar Todos os Produtos\n\n");
+				System.out.println(Cores.TEXT_CYAN + "Listar Todos os Produtos\n\n");
 				produtos.listarProdutos();
 
 				keyPress();
 				break;
 			case 3:
-				System.out.println("Consultar Produtos - por ID\n\n");
+				System.out.println(Cores.TEXT_CYAN + "Consultar Produtos - por ID\n\n");
 
 				System.out.println("Digite o ID do Produto: ");
 				numero = leia.nextInt();
@@ -115,7 +106,7 @@ public class Menu {
 				keyPress();
 				break;
 			case 4:
-				System.out.println("Atualizar Produto\n\n");
+				System.out.println(Cores.TEXT_CYAN + "Atualizar Produto\n\n");
 
 				System.out.println("Digite o ID do Produto: ");
 				id = leia.nextInt();
@@ -153,13 +144,13 @@ public class Menu {
 
 					}
 				} else {
-					System.out.println("O Produto não foi encontrado!");
+					System.out.println("\nO Produto não foi encontrado!");
 				}
 
 				keyPress();
 				break;
 			case 5:
-				System.out.println("Deletar Produto\n\n");
+				System.out.println(Cores.TEXT_CYAN + "Deletar Produto\n\n");
 
 				System.out.println("\nDigite o ID do Produto: ");
 				numero = leia.nextInt();
@@ -169,7 +160,7 @@ public class Menu {
 				keyPress();
 				break;
 			default:
-				System.out.println("\nOpção Inválida!\n");
+				System.out.println(Cores.TEXT_RED + "\nOpção Inválida!\n");
 				keyPress();
 				break;
 			}
@@ -179,7 +170,9 @@ public class Menu {
 	private static void keyPress() {
 		try {
 
-			System.out.println("\nPressione Enter para Continuar...");
+			System.out.println("\n------------------------------------");
+			System.out.println(" - Pressione Enter para Continuar - ");
+			System.out.println("------------------------------------");
 			System.in.read();
 
 		} catch (IOException e) {
