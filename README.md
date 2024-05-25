@@ -2,7 +2,7 @@
 # Performance Goals Generation - Módulo 1 (back-end)
 
 ## Visão Geral
-Este repositório contém um projeto Java focado na avaliação mensal do Bootcamp da Generation. Trata-se de um back-end de uma farmácia, possui produto e categoria.
+Este repositório contém um projeto Java focado na avaliação mensal do Bootcamp da Generation. Trata-se de um back-end de um mercado, possui as classes de produto, alimento e bebida.
 
 ## Funcionalidades
 - Configuração de projeto em Java
@@ -19,6 +19,9 @@ Este repositório contém um projeto Java focado na avaliação mensal do Bootca
 ## Uso
 1. Navegue até o diretório `src`.
 2. Execute a classe principal para iniciar a aplicação.
+
+## Visualização da aplicação
+
 
 :)
 
