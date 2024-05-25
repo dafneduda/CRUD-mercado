@@ -55,7 +55,7 @@ public abstract class Produto {
 			tipoProduto = "Alimento";
 			break;
 		case 2:
-			tipoProduto = "Outros";
+			tipoProduto = "Bebida";
 			break;
 		}
 
