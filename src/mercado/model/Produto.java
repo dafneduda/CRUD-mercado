@@ -59,14 +59,14 @@ public abstract class Produto {
 			break;
 		}
 
-		System.out.println("--------------------------------");
-		System.out.println("PRODUTO");
-		System.out.println("--------------------------------");
+		System.out.println("------------------------------------");
+		System.out.println("             PRODUTO                ");
+		System.out.println("------------------------------------");
 		System.out.println("ID: " + this.id);
 		System.out.println("Nome: " + this.nome);
 		System.out.println("Tipo: " + tipoProduto);
 		System.out.println("Preço R$" + this.preco);
-
+		
 	}
 
 }
