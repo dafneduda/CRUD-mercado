@@ -1,8 +1,8 @@
 
-# Performance Goals Generation - Módulo 2 (Front-end)
+# Performance Goals Generation - Módulo 1 (back-end)
 
 ## Visão Geral
-Este repositório contém um projeto Java focado na avaliação mensal do Bootcamp da Generation. Trata-se de um front-end de uma farmácia, possui produto e categoria.
+Este repositório contém um projeto Java focado na avaliação mensal do Bootcamp da Generation. Trata-se de um back-end de uma farmácia, possui produto e categoria.
 
 ## Funcionalidades
 - Configuração de projeto em Java
