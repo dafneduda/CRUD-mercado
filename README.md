@@ -2,7 +2,7 @@
 # Performance Goals Generation - Módulo 1 (back-end)
 
 ## Visão Geral
-Este repositório contém um projeto Java focado na avaliação mensal do Bootcamp da Generation. Trata-se de um back-end de um mercado, possui as classes de produto, alimento e bebida.
+Este repositório contém um projeto Java focado na avaliação mensal do Bootcamp da Generation. Trata-se do CRUD de um mercado, possui as classes de produto, alimento e bebida.
 
 ## Funcionalidades
 - Configuração de projeto em Java
@@ -21,6 +21,7 @@ Este repositório contém um projeto Java focado na avaliação mensal do Bootca
 2. Execute a classe principal para iniciar a aplicação.
 
 ## Visualização da aplicação
+![Captura de Tela 2024-05-24 às 21 35 39](https://github.com/dafneduda/performance-goal-java-generation/assets/147463270/e2d493d9-2bfa-46b2-add8-5b0035573085)
 
 
 :)
